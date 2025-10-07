@@ -1,0 +1,295 @@
+/* ---------- Global Dark Background ---------- */
+body {
+  background-color: #000; /* full black background */
+  color: #fff;            /* white text for readability */
+  overflow-x:
+
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #2a0353, #2575fc, #0d0918);
+  background-size: 300% 300%;
+  animation: moveGradient 8s ease infinite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+@keyframes moveGradient {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+.logo { font-size:1.6rem; font-weight:bold; color:#fff; }
+.logo span { color:#ffda79; }
+.nav-links { display:flex; gap:25px; list-style:none; }
+.nav-links li a { text-decoration:none; color:white; font-weight:500; transition:0.3s; }
+.nav-links li a:hover { color:#ffda79; }
+.search-box input { padding:6px 12px; border-radius:20px; border:none; outline:none; font-size:0.9rem; transition:0.3s; }
+.search-box input:focus { box-shadow:0 0 10px rgba(255,255,255,0.8); }
+@media (max-width:768px) { .nav-links,.search-box{ display:none; } }
+
+/* ---------- Hero Section ---------- */
+#hero { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; margin-top:60px; }
+.hero-content { animation: fadeUp 1.2s ease forwards; }
+.profile-pic {
+  width: 220px;              /* 🔥 Increase size */
+  height: 220px;
+  border-radius: 50%;        /* Makes it circular */
+  object-fit: cover;         /* Keeps image centered & clean */
+  border: 3px solid #044d5f; /* Neon border */
+  box-shadow: 0 0 25px #08b4ca; /* Glow effect */
+  margin-bottom: 20px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Hover effect for photo */
+.profile-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #0e65c9;
+}
+
+.hero-content h1 span { color:#ffda79; }
+.hero-buttons { margin-top:20px; display:flex; gap:15px; justify-content:center; }
+/* General Button */
+.btn {
+  background: #222;           /* dark gray button */
+  color: #fff;                /* white text */
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px 25px;
+  cursor: pointer;
+  border: 2px solid #555;    /* subtle border for visibility */
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #444;           /* slightly lighter on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffb0; /* glowing effect */
+}
+
+/* CV Button */
+.cv-btn {
+  background: #111;           /* darker shade for CV button */
+  color: #fff;
+  border: 2px solid #555;
+}
+
+.cv-btn:hover {
+  background: #333;
+  box-shadow: 0 0 20px #ffda79; /* glowing on hover */
+}
+
+
+/* ---------- Sections ---------- */
+section { background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); padding:80px 20px; color:white; text-align:center; border-radius:15px; margin:40px auto; max-width:1200px; }
+
+/* ---------- About ---------- */
+#about p { max-width:800px; margin:20px auto; line-height:1.8; font-size:1.05rem; animation: fadeUp 1s ease forwards; }
+
+/* ---------- Skills ---------- */
+#skills h2 { margin-bottom:40px; }
+.skill { margin:20px auto; max-width:600px; }
+.skill h3 { margin-bottom:8px; text-align:left; }
+.skill-bar { background: rgba(255,255,255,0.2); border-radius:25px; overflow:hidden; height:20px; }
+.skill-fill { height:100%; background: linear-gradient(90deg,#00ffb0,#007bff); width:0; border-radius:25px; animation: fillSkill 1.5s forwards; }
+
+/* ---------- Projects ---------- */
+/* ---------- Projects Section ---------- */
+#projects {
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Card style --- */
+.project-card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+/* --- Hover animation --- */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 176, 0.6);
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* --- Animation visible class --- */
+.project-card.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- Contact ---------- */
+#contact a { color:#00ffb0; text-decoration:none; }
+.social-links { margin-top:20px; display:flex; justify-content:center; gap:20px; }
+.social-links a img { width:40px; height:40px; transition: transform 0.3s, filter 0.3s; filter:brightness(1) drop-shadow(0 0 0 #fff); }
+.social-links a:hover img { transform:scale(1.2); filter:brightness(1.5) drop-shadow(0 0 8px #00ffb0); }
+
+/* ---------- Footer ---------- */
+footer { background:#0a0a0a; color:white; text-align:center; padding:20px; }
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp { 0%{opacity:0; transform:translateY(50px);} 100%{opacity:1; transform:translateY(0);} }
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);} }
+@keyframes fillSkill { from{width:0;} to{width:var(--fill-width);} }
+
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+  background: #000; /* black background */
+  color: #fff;      /* white text for visibility */
+  position: relative;
+}
+/* ---------- Skills Section ---------- */
+#skills {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 80px 20px;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.skill {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.skill h3 {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffb0, #007bff);
+  width: 0;
+  border-radius: 25px;
+  transition: width 1.5s ease;
+}
+/* ---------- Skills Section ---------- */
+#skills {
+  background: #000;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00ffb0;
+  text-shadow: 0 0 15px #00ffb0;
+}
+
+.skill {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.skill p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: #ddd;
+}
+
+/* Skill Bar */
+.skill-bar {
+  background: #222;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  transition: width 2s ease-out;
+}
+
+/* Colors for each skill */
+.skill-fill.html {
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+}
+
+.skill-fill.css {
+  background: linear-gradient(90deg, #36d1dc, #5b86e5);
+}
+
+.skill-fill.js {
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+}
