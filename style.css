@@ -54,7 +54,7 @@ body {
   color: #f0f0f0;
   text-decoration: none;
 }
-
+/* 
 .logo-text {
   color: #f0f0f0;
 }
@@ -62,7 +62,7 @@ body {
 .logo-dot {
   color: #00ffb0;
   margin-left: 2px;
-}
+} */
 
 .nav-links {
   display: flex;
