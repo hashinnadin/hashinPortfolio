@@ -3,117 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammed Hashin Nadin K | Portfolio</title>
+  <title>Mohammed Hashin Nadin K | Full Stack Developer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<!-- 🌈 Navigation Bar -->
-<nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search sections..." />
-  </div>
-</nav>
-
-<!-- 🌟 Hero Section -->
-<header id="hero">
-  <div class="hero-content">
-    <img src="WhatsApp Image 2025-10-06 at 10.30.00_4647756b.jpg" alt="Mohammed Hashin Nadin K" class="profile-pic">
-    <h1>Hi, I'm <span>MOHAMMED HASHIN NADIN K</span></h1>
-    <h2>Software Developer & Student</h2>
-    
-    <div class="hero-buttons">
-      <button class="btn">View My Work</button>
-      <a href="cv/Mohammed_Hashin_CV.pdf" download class="btn cv-btn"> Download CV</a>
-    </div>
-  </div>  
-</header>
-
-<!-- 💡 About Section -->
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Hello! I am <strong>Mohammed Hashin Nadin K</strong>, a passionate software developer and student currently learning <strong>HTML, CSS, and JavaScript</strong>.  
-    I enjoy creating interactive and visually appealing websites that combine design, usability, and performance.  
-    My goal is to continuously improve my coding skills, explore new web technologies, and develop projects that make a real impact.  
-    I am curious, dedicated, and always eager to learn something new in the world of programming and web development.  
-    In my free time, I like exploring new frameworks, building mini-projects, and experimenting with creative web designs.
-  </p>
-</section>
-
-<!-- 💪 Skills Section -->
-<section id="skills">
-  <h2>My Skills</h2>
-
-  <div class="skill">
-    <h3>HTML <span>95%</span></h3>
-    <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
-  </div>
-
-  <div class="skill">
-    <h3>CSS <span>90%</span></h3>
-    <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
-  </div>
-
-  <div class="skill">
-    <h3>JavaScript <span>85%</span></h3>
-    <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
-  </div>
-</section>
-
-
-<!-- 💼 Projects Section -->
-<section id="projects">
-  <h2>My Projects</h2>
-  
-  <div class="projects-grid">
-    <div class="project-card">
-      <img src="WhatsApp Image 2025-10-06 at 17.05.33_de474d9d.jpg" alt="Portfolio Website">
-      <h3>Navigation </h3>
-    </div>
-    <div class="project-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-WmVwQrOzqrit6M8ZZKWtZJcKtbp7lOpOag&s" alt="Calculator App">
-      <h3> Calculator </h3>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">MHN</span>
+        <span class="logo-dot">.</span>
+      </div>
       
+      <ul class="nav-links">
+        <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search sections..." />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-   <!-- inside .projects-grid in index.html -->
-<a class="project-link" href="grid.html" target="_blank"> 
-  <div class="project-card">
-    <img src="WhatsApp Image 2025-10-06 at 16.59.54_0c1821f8.jpg" alt="Trivago Clone">
-    <h3>Trivago Web page</h3>
-    
-  </div>
-</a>
-  </div>
-</section>
+  </nav>
 
-<!--  Contact Section -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:hashinnadin@.com">hashinnadin@.com</a></p>
-  <!-- Social Links -->
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/hashinnadin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-      <img src="data:image/png;base64,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" alt="LinkedIn">
-    </a>
-    <a href="https://www.instagram.com/hashiihn?igsh=YzhyZHpxaWFmNm1y" target="_blank">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnvIFcovOX3CbVrmFgTKLxZKBbk71dbx1U0Q&s" alt="Instagram">
-    </a>
-  </div>
-</section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="profile-container">
+          <div class="profile-frame">
+            <img src="image.png" alt="Mohammed Hashin Nadin K" class="profile-pic">
+            <div class="profile-glow"></div>
+          </div>
+        </div>
+        
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="greeting">Hello, I'm</span>
+            <span class="name-highlight">Mohammed Hashin Nadin K</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span class="typing-text">Full Stack Developer</span>
+            <span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            Crafting digital experiences with code, creativity, and cutting-edge technology.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-eye"></i> View My Work
+            </a>
+            <a href="cv/Mohammed_Hashin_CV.pdf" download class="btn btn-secondary">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 Mohammed Hashin Nadin K | Made with using HTML, CSS & JS</p>
-</footer>
+  <section id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-number">01.</span> About Me
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I am <strong>Mohammed Hashin Nadin K</strong>, a passionate software developer and student specializing in modern web technologies. My expertise spans across <strong>HTML, CSS, JavaScript</strong>, and I'm constantly expanding my knowledge in frameworks and backend technologies.
+          </p>
+          <p>
+            I believe in creating web applications that are not only visually appealing but also highly functional and user-friendly. My approach combines clean code, modern design principles, and performance optimization to deliver exceptional digital experiences.
+          </p>
+          <p>
+            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or experimenting with creative UI/UX designs. I'm always eager to take on new challenges and collaborate on innovative projects.
+          </p>
+          
+          <div class="about-stats">
+            <div class="stat">
+              <h3>3</h3>
+              <p>Tech Stacks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="port.js"></script>
+  <section id="skills">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-number">02.</span> My Skills
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+          <div class="skill">
+            <div class="skill-info">
+              <span>HTML5</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill html" data-width="95"></div>
+            </div>
+          </div>
+          
+          <div class="skill">
+            <div class="skill-info">
+              <span>CSS3</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill css" data-width="90"></div>
+            </div>
+          </div>
+          
+          <div class="skill">
+            <div class="skill-info">
+              <span>JavaScript</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill js" data-width="85"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Development Tools</h3>
+          <div class="tool-list">
+            <div class="tool-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git & GitHub</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-terminal"></i>
+              <span>Command Line</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-code-branch"></i>
+              <span>VS Code</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-palette"></i>
+              <span>Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-number">03.</span> My Projects
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="WhatsApp Image 2025-10-06 at 17.05.33_de474d9d.jpg" alt="Portfolio Website">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Portfolio Website</h3>
+            <p>A fully responsive portfolio website with modern design and smooth animations.</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-WmVwQrOzqrit6M8ZZKWtZJcKtbp7lOpOag&s" alt="Calculator App">
+            <div class="project-overlay">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Calculator App</h3>
+            <p>A feature-rich calculator application with modern UI and advanced functionalities.</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>CSS3</span>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+        </div>
+        
+        <a class="project-card-link" href="grid.html" target="_blank">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="WhatsApp Image 2025-10-06 at 16.59.54_0c1821f8.jpg" alt="Trivago Clone">
+              <div class="project-overlay">
+                <div class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Trivago Clone</h3>
+              <p>A responsive hotel booking website clone with search functionality and modern UI.</p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS Grid</span>
+                <span>Flexbox</span>
+              </div>
+              <div class="project-badge">Live Demo</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-number">04.</span> Get In Touch
+        </h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Let's Connect!</h3>
+          <p>I'm currently open to new opportunities, interesting projects, or just a friendly chat about technology.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:hashinnadin@.com">hashinnadin@.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Available for remote work worldwide</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h4>Follow Me</h4>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/hashinnadin?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/hashiihn?igsh=YzhyZHpxaWFmNm1y" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-icon github">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-icon twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Send Me a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span>MHN</span>
+        <span class="logo-dot">.</span>
+      </div>
+      <p class="footer-text">Crafted with passion using HTML, CSS & JavaScript</p>
+      <p class="copyright">© 2025 Mohammed Hashin Nadin K. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="port.js"></script>
 </body>
 </html>
